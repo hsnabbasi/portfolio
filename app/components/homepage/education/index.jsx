@@ -1,4 +1,6 @@
 // @flow strict
+"use client"; // Important if using App Router
+
 import Image from "next/image";
 
 import { educations } from "@/utils/data/educations";

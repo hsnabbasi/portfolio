@@ -1,3 +1,4 @@
+"use client"; // Important if using App Router
 import { projectsData } from '@/utils/data/projects-data';
 import ProjectCard from './project-card';
 

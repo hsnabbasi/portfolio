@@ -1,4 +1,6 @@
 // @flow strict
+"use client"; // Important if using App Router
+
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 import BlogCard from './blog-card';

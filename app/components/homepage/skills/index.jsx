@@ -1,4 +1,5 @@
 // @flow strict
+"use client"; // Important if using App Router
 
 import { skillsData } from "@/utils/data/skills";
 import { skillsImage } from "@/utils/skill-image";

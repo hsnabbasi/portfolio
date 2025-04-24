@@ -1,3 +1,4 @@
+"use client"; // Important if using App Router
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
