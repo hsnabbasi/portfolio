@@ -4,10 +4,10 @@
 import Image from "next/image";
 
 import { educations } from "@/utils/data/educations";
-import { BsPersonWorkspace } from "react-icons/bs";
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 import lottieFile from '/public/lottie/study.json';
+import { WorkspaceIcon } from "../../helper/site-icons";
 
 function Education() {
   return (
@@ -29,7 +29,7 @@ function Education() {
         <div className="flex  items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
           <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Educations
+            Education
           </span>
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
         </div>
@@ -63,7 +63,7 @@ function Education() {
                       </div>
                       <div className="flex items-center gap-x-8 px-3 py-5">
                         <div className="text-violet-500  transition-all duration-300 hover:scale-125">
-                          <BsPersonWorkspace size={36} />
+                          <WorkspaceIcon size={36} />
                         </div>
                         <div>
                           <p className="text-base sm:text-xl mb-2 font-medium uppercase">

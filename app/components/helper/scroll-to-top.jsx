@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FaArrowUp } from "react-icons/fa6";
+import { ArrowUpIcon } from "./site-icons";
 
 const DEFAULT_BTN_CLS =
   "fixed bottom-8 right-6 z-50 flex items-center rounded-full bg-gradient-to-r from-pink-500 to-violet-600 p-4 hover:text-xl transition-all duration-300 ease-out";
@@ -28,7 +28,7 @@ const ScrollToTop = () => {
 
   return (
     <button className={btnCls} onClick={onClickBtn}>
-      <FaArrowUp />
+      <ArrowUpIcon />
     </button>
   );
 };

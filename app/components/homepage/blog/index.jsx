@@ -2,8 +2,8 @@
 "use client"; // Important if using App Router
 
 import Link from 'next/link';
-import { FaArrowRight } from 'react-icons/fa';
 import BlogCard from './blog-card';
+import { ArrowRightIcon } from '../../helper/site-icons';
 
 function Blog({ blogs }) {
 
@@ -43,7 +43,7 @@ function Blog({ blogs }) {
           href="/blog"
         >
           <span>View More</span>
-          <FaArrowRight size={16} />
+          <ArrowRightIcon size={16} />
         </Link>
       </div>
     </div>

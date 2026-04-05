@@ -16,7 +16,7 @@ export const educations = [
     website: "http://www.qau.edu.pk/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Higher Secondary School Certificate (ICS)",
     duration: "2014 – 2016",
     institution: "Islamabad College For Boys",
@@ -24,7 +24,7 @@ export const educations = [
     website: "https://icb.edu.pk/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Secondary School Certificate in Science",
     duration: "2012 – 2014",
     institution: "Islamabad College For Boys G-6/3",

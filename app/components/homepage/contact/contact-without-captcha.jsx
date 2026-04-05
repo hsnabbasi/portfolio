@@ -1,10 +1,11 @@
 "use client";
 // @flow strict
 import { isValidEmail } from '@/utils/check-email';
+import emailjs from '@emailjs/browser';
 import axios from 'axios';
 import { useState } from 'react';
-import { TbMailForward } from "react-icons/tb";
 import { toast } from 'react-toastify';
+import { SendMailIcon } from '../../helper/site-icons';
 
 function ContactWithoutCaptcha() {
   const [error, setError] = useState({ email: false, required: false });
@@ -119,7 +120,7 @@ function ContactWithoutCaptcha() {
               onClick={handleSendMail}
             >
               <span>Send Message</span>
-              <TbMailForward className="mt-1" size={18} />
+              <SendMailIcon className="mt-1" size={18} />
             </button>
           </div>
         </div>

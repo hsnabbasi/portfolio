@@ -2,8 +2,7 @@
 import { timeConverter } from '@/utils/time-converter';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BsHeartFill } from 'react-icons/bs';
-import { FaCommentAlt } from 'react-icons/fa';
+import { CommentIcon, HeartIcon } from '../../helper/site-icons';
 
 function BlogCard({ blog }) {
 
@@ -24,12 +23,12 @@ function BlogCard({ blog }) {
           <p>{timeConverter(blog.published_at)}</p>
           <div className="flex items-center gap-3">
             <p className="flex items-center gap-1">
-              <BsHeartFill />
+          <HeartIcon size={16} />
               <span>{blog.public_reactions_count}</span>
             </p>
             {blog.comments_count > 0 &&
               <p className="flex items-center gap-1">
-                <FaCommentAlt />
+                <CommentIcon size={16} />
                 <span>{blog.comments_count}</span>
               </p>
             }

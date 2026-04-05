@@ -1,7 +1,5 @@
 // @flow strict
 import Link from 'next/link';
-import { CgGitFork } from "react-icons/cg";
-import { IoStar } from "react-icons/io5";
 
 function Footer() {
   return (
@@ -12,24 +10,22 @@ function Footer() {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <p className="text-sm">
-            © Developer Portfolio by <Link target="_blank" href="https://www.linkedin.com/in/abu-said-bd/" className="text-[#16f2b3]">Hassan Abbasi</Link>
+            © {new Date().getFullYear()} <Link target="_blank" href="https://www.linkedin.com/in/hassan-abbasi-dev" className="text-[#16f2b3]">Hassan Fayyaz Abbasi</Link>. Built with Next.js and Tailwind CSS.
           </p>
-          <div className="flex items-center gap-5">
+          <div className="mt-4 flex items-center gap-5 md:mt-0">
             <Link
               target="_blank"
-              href="https://github.com/said7388/developer-portfolio"
+              href="https://github.com/hsnabbasi"
               className="flex items-center gap-2 uppercase hover:text-[#16f2b3]"
             >
-              <IoStar />
-              <span>Star</span>
+              <span>GitHub</span>
             </Link>
             <Link
               target="_blank"
-              href="https://github.com/said7388/developer-portfolio/fork"
+              href="mailto:mhassanabbasi313@gmail.com"
               className="flex items-center gap-2 uppercase hover:text-[#16f2b3]"
             >
-              <CgGitFork />
-              <span>Fork</span>
+              <span>Email</span>
             </Link>
           </div>
         </div>

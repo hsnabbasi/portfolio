@@ -3,10 +3,10 @@
 
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
-import { BsPersonWorkspace } from "react-icons/bs";
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 import experience from '/public/lottie/code.json';
+import { WorkspaceIcon } from "../../helper/site-icons";
 
 function Experience() {
   return (
@@ -23,7 +23,7 @@ function Experience() {
         <div className="flex  items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
           <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Experiences
+            Experience
           </span>
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
         </div>
@@ -57,7 +57,7 @@ function Experience() {
                       </div>
                       <div className="flex items-center gap-x-8 px-3 py-5">
                         <div className="text-violet-500  transition-all duration-300 hover:scale-125">
-                          <BsPersonWorkspace size={36} />
+                          <WorkspaceIcon size={36} />
                         </div>
                         <div>
                           <p className="text-base sm:text-xl mb-2 font-medium uppercase">
@@ -66,8 +66,16 @@ function Experience() {
                           <p className="text-sm sm:text-base">
                             {experience.company}
                           </p>
+                          <p className="mt-1 text-xs text-gray-400 sm:text-sm">
+                            {experience.location}
+                          </p>
                         </div>
                       </div>
+                      <ul className="space-y-2 px-3 pb-4 text-sm leading-6 text-gray-300">
+                        {experience.responsibilities.slice(0, 4).map((item) => (
+                          <li key={item}>• {item}</li>
+                        ))}
+                      </ul>
                     </div>
                   </GlowCard>
                 ))

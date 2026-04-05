@@ -5,8 +5,8 @@ import emailjs from '@emailjs/browser';
 import axios from 'axios';
 import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { TbMailForward } from "react-icons/tb";
 import { toast } from 'react-toastify';
+import { SendMailIcon } from '../../helper/site-icons';
 
 function ContactWithCaptcha() {
   const [input, setInput] = useState({
@@ -47,12 +47,12 @@ function ContactWithCaptcha() {
     const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
 
     try {
-      const res = await emailjs.send(serviceID, templateID, userInput, options);
-      const teleRes = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/contact`, userInput);
+      const res = await emailjs.send(serviceID, templateID, input, options);
+      const teleRes = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/contact`, input);
 
       if (res.status === 200 || teleRes.status === 200) {
         toast.success('Message sent successfully!');
-        setUserInput({
+        setInput({
           name: '',
           email: '',
           message: '',
@@ -135,7 +135,7 @@ function ContactWithCaptcha() {
               onClick={handleSendMail}
             >
               <span>Send Message</span>
-              <TbMailForward className="mt-1" size={18} />
+              <SendMailIcon className="mt-1" size={18} />
             </button>
           </div>
         </div>
